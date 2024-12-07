@@ -9,7 +9,7 @@
 body {
     font-family: Arial, sans-serif;
     color: white;
-    background-color: #d10a1d;
+    background-color: #b1041d; /* Um tom mais suave de vermelho */
     line-height: 1.5;
     transition: background-color 0.5s ease;
 }
@@ -44,6 +44,9 @@ nav ul li a {
 main {
     text-align: center;
     margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
     animation: fadeIn 1s ease-out;
 }
 
@@ -69,7 +72,7 @@ main {
 
 @keyframes zoomIn {
     0% {
-        transform: scale(0.8);
+        transform: scale(0.9); /* Um zoom mais suave */
         opacity: 0;
     }
     100% {
@@ -92,7 +95,7 @@ main {
     font-size: 2em;
     font-weight: bold;
     color: black;
-    background-color: white;
+    background-color: #ffcc00; /* Amarelo suave para destaque */
     display: inline-block;
     padding: 5px 10px;
     border-radius: 5px;
@@ -100,7 +103,7 @@ main {
 
 /* Efeitos de Hover */
 .product .image img {
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .product .image img:hover {
@@ -123,12 +126,13 @@ main {
     align-items: center;
     gap: 10px;
     font-size: 1.5em;
-    transition: transform 0.3s ease, color 0.3s ease;
+    transition: transform 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .icon-button:hover {
     transform: scale(1.1);
     color: #ffcc00;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 /* Estilo para a seção do vídeo */
@@ -220,23 +224,31 @@ video::after {
 }
 
 .botao{
-    border-style: solid;
-    color: transparent;
+    border: 2px solid transparent;
+    color: white;
     border-radius: 10px;
     text-align: center;
-    transition: background-color ease-in 55ms;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    padding: 10px 20px;
+    font-size: 1em;
 }
 
-.azul:hover{
+.azul:hover {
     background-color: #09AFFF;
+    transform: scale(1.05);
 }
 
-.roxo:hover{
+.roxo:hover {
     background-color: #5911F2;
+    transform: scale(1.05);
 }
-.vermelho:hover{
+
+.vermelho:hover {
     background-color: #FF4141;
+    transform: scale(1.05);
 }
-.verde:hover{
+
+.verde:hover {
     background-color: #32CD32;
+    transform: scale(1.05);
 }
