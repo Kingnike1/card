@@ -1,0 +1,242 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo e Tipografia */
+body {
+    font-family: Arial, sans-serif;
+    color: white;
+    background-color: #d10a1d;
+    line-height: 1.5;
+    transition: background-color 0.5s ease;
+}
+
+/* Estilo do Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo img {
+    width: 100px;
+}
+
+/* Navegação */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Conteúdo Principal */
+main {
+    text-align: center;
+    margin-top: 50px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animação de Fade In */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Seção do Produto */
+.product {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    animation: zoomIn 1s ease-in-out;
+}
+
+@keyframes zoomIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.details {
+    max-width: 50%;
+    text-align: left;
+}
+
+.details h1,
+.details p {
+    margin-bottom: 10px;
+}
+
+.price {
+    font-size: 2em;
+    font-weight: bold;
+    color: black;
+    background-color: white;
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Efeitos de Hover */
+.product .image img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product .image img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.product .details:hover {
+    transform: translateY(-10px);
+    transition: transform 0.3s ease;
+}
+
+/* Botão de Ícone */
+.icon-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.5em;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.icon-button:hover {
+    transform: scale(1.1);
+    color: #ffcc00;
+}
+
+/* Estilo para a seção do vídeo */
+.video {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #333;
+    border-radius: 10px;
+    margin: 20px auto;
+    max-width: 80%;
+}
+
+/* Título da seção */
+.video h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Estilo do vídeo */
+video {
+    width: 100%;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+/* Mensagem de fallback para navegadores que não suportam vídeo */
+video::after {
+    content: "Seu navegador não suporta a tag de vídeo.";
+    display: block;
+    color: #f00;
+    font-size: 1.2em;
+    margin-top: 20px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .details {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .price {
+        font-size: 1.5em;
+    }
+
+    .video {
+        padding: 20px 10px;
+    }
+
+    .video h2 {
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo img {
+        width: 80px;
+    }
+
+    nav ul li a {
+        font-size: 0.9em;
+    }
+
+    .details h1 {
+        font-size: 1.5em;
+    }
+
+    .details p {
+        font-size: 0.9em;
+    }
+}
+
+.botao{
+    border-style: solid;
+    color: transparent;
+    border-radius: 10px;
+    text-align: center;
+    transition: background-color ease-in 55ms;
+}
+
+.azul:hover{
+    background-color: #09AFFF;
+}
+
+.roxo:hover{
+    background-color: #5911F2;
+}
+.vermelho:hover{
+    background-color: #FF4141;
+}
+.verde:hover{
+    background-color: #32CD32;
+}
